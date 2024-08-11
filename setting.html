@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Тестовое</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+         <link rel="stylesheet" href="style.css">
+         <link rel="stylesheet" href="fonts/stylesheet.css">
+      </head>
+      <body>
+        <header class="header">
+        <div class="container header">
+            <a href="" class="logo">
+                <img src="images/Logo.svg" alt="">
+            </a>
+            <a href="" class="logo">
+                <img src="images/Vector.svg" alt="">
+            </a>
+        </div>    
+    </header>
+    <div class="container">
+        <div class="container__main">
+            <div class="sidenav">
+                <ul>
+                    <li><a class="menu_link" href="#"><img src="images/property.svg" alt=""> Имущество</a></li>
+                    <li><a class="menu_link" href="#"><img src="images/inventory.svg" alt=""> Инвентаризация</a></li>
+                    <li><a class="menu_link" href="#"><img src="images/employees.svg" alt=""> Сотрудники</a></li>
+                    <li><a class="menu_link" href="#"><img src="images/notification.svg" alt=""> Уведомления</a></li>
+                    <li><a class="menu_link" href="index.html"><img src="images/location.svg" alt=""> Локации</a></li>
+                    <li><a class="menu_link" href="#" style="background-color: #172139; color: #fff;"><img src="images/settings.svg" alt="" style="fill: #fff;"> Настройки</a></li>
+                    <li><button class="close_btn" onclick="close_menu()"><img src="images/button_close.svg" alt="" > Скрыть меню</button></li>
+                </ul>
+            </div>
+            <div class="sidenav_close">
+                <ul>
+                    <li><a class="menu_link" href="#"><img src="images/property.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="#"><img src="images/inventory.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="#"><img src="images/employees.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="#"><img src="images/notification.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="index.html" ><img src="images/location.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="#" style="background-color: #172139; color: #fff;"><img src="images/settings.svg" alt="" > </a></li>
+                    <li><button class="close_btn" onclick="open_menu()"><img class="open_menu" src="images/button_close.svg" alt="" ></button></li>
+                </ul>
+            </div>
+            <div class="container location set">
+                <h1> Настройки / Локации</h1> 
+                <div class="settings">
+                    <div class="nav">
+                        <ul>
+                            <li><a class="location_link" href="#"> Имущество</a></li>
+                            <li><a class="location_link" href="#"> Инвентаризация</a></li>
+                            <li><a class="location_link" href="#"> Сотрудники</a></li>
+                            <li><a class="location_link" href="#" style="background-color: #172139; color: #fff;"> Локации</a></li>
+                            <li><a class="location_link" href="#"> Уведомления</a></li>
+                            <li><a class="location_link" href="#"> Справочники</a></li>
+                            <li><a class="location_link" href="#"> Пользователь</a></li>
+                        </ul>
+                    </div>
+                    <h1> Настройка полей таблицы</h1> 
+                    <div class="settings_table">
+                        <table>
+                            <thead>
+                              <tr>
+                                <th scope="col"> </th>
+                                <th scope="col"> Описание</th>
+                                <th scope="col"> Сортировка</th>
+                                <th scope="col"> ID</th>
+                                <th scope="col"> Тип поля</th>
+                                <th scope="col"> Выводить в таблицу</th>
+                                <th scope="col"> Обязательно</th>
+                                <th scope="col"> Удалить</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>  <button class="btn_dots"> </button> Название 
+                                    <button class="btn_pen"> </button>
+                                </td>
+                                <td><a href=""><img src="images/help.svg" alt=""></a></td>
+                                <td><input type="text" value="500"></td>
+                                <td>1001</td>
+                                <td>Строка</td>
+                                <td><input id='check_1_1' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_1"></label></td>
+                                <td><input id='check_2_1' type="checkbox" class="sure_table" checked><label class="checkbox_label tbl" for="check_2_1"></label></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td> <button class="btn_dots"> </button>  Цена 
+                                    <button class="btn_pen"> </button>
+                                </td>
+                                <td></td>
+                                <td><input type="text" value="510"></td>
+                                <td>1002</td>
+                                <td>Число</td>
+                                <td><input id='check_1_2' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_2"></label></td>
+                                <td><input id='check_2_2' type="checkbox" class="sure_table" checked><label class="checkbox_label tbl" for="check_2_2"></label></td>
+                                <td><input id='check_3_2' type="checkbox" class="delete_table" checked><label class="checkbox_label tbl" for="check_3_2"></label></td>
+                              </tr>
+                              <tr>
+                                <td><button class="btn_dots"> </button> МОЛ
+                                    <button class="btn_pen"></button>
+                                </td>
+                                <td></td>
+                                <td><input type="text" value="520"></td>
+                                <td>1003</td>
+                                <td>Справочник <a href=""><img src="images/file.svg" alt=""></a></td>
+                                <td><input id='check_1_3' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_3"></label></td>
+                                <td><input id='check_2_3' type="checkbox" class="sure_table" checked><label class="checkbox_label tbl" for="check_2_3"></label></td>
+                                <td><input id='check_3_3' type="checkbox" class="delete_table"><label class="checkbox_label tbl" for="check_3_3"></label></td>
+                              </tr>
+                              <tr>
+                                <td><button class="btn_dots"> </button> Фото
+                                    <button class="btn_pen"></button></td>
+                                <td></td>
+                                <td><input type="text" value="530"></td>
+                                <td>1004</td>
+                                <td>Файл</td>
+                                <td><input id='check_1_4' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_4"></label></td>
+                                <td><input id='check_2_4' type="checkbox" class="sure_table" checked><label class="checkbox_label tbl" for="check_2_4"></label></td>
+                                <td><input id='check_3_4' type="checkbox" class="delete_table"><label class="checkbox_label tbl" for="check_3_4"></label></td>
+                              </tr>
+                              <tr>
+                                <td><button class="btn_dots"> </button> Цвет
+                                    <button class="btn_pen"></button></td>
+                                <td></td>
+                                <td><input type="text" value="540"></td>
+                                <td>1005</td>
+                                <td>Строка</td>
+                                <td><input id='check_1_5' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_5"></label></td>
+                                <td><input id='check_2_5' type="checkbox" class="sure_table" checked><label class="checkbox_label tbl" for="check_2_5"></label></td>
+                                <td><input id='check_3_5' type="checkbox" class="delete_table"><label class="checkbox_label tbl" for="check_3_5"></label></td>
+                              </tr>
+                              <tr>
+                                <td><button class="btn_dots"> </button> Локация
+                                    <button class="btn_pen"></button></td>
+                                <td></td>
+                                <td><input type="text" value="550"></td>
+                                <td>1006</td>
+                                <td>Справочник <a href=""><img src="images/file.svg" alt=""></a></td>
+                                <td><input id='check_1_6' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_6"></label></td>
+                                <td><input id='check_2_6' type="checkbox" class="sure_table" checked><label class="checkbox_label tbl" for="check_2_6"></label></td>
+                                <td><input id='check_3_6' type="checkbox" class="delete_table"><label class="checkbox_label tbl" for="check_3_6"></label></td>
+                              </tr>
+                              <tr>
+                                <td><button class="btn_dots"> </button> Количество
+                                    <button class="btn_pen"></button></td>
+                                <td></td>
+                                <td><input type="text" value="560"></td>
+                                <td>1007</td>
+                                <td>Число</td>
+                                <td><input id='check_1_7' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_7"></label></td>
+                                <td><input id='check_2_7' type="checkbox" class="sure_table" checked><label class="checkbox_label tbl" for="check_2_7"></label></td>
+                                <td><input id='check_3_7' type="checkbox" class="delete_table"><label class="checkbox_label tbl" for="check_3_7"></label></td>
+                              </tr>
+                              <tr>
+                                <td><button class="btn_dots"> </button> Описание
+                                    <button class="btn_pen"></button></td>
+                                <td></td>
+                                <td><input type="text" value="570"></td>
+                                <td>1008</td>
+                                <td>Текст</td>
+                                <td><input id='check_1_8' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_8"></label></td>
+                                <td><input id='check_2_8' type="checkbox" class="sure_table" checked><label class="checkbox_label tbl" for="check_2_8"></label></td>
+                                <td><input id='check_3_8' type="checkbox" class="delete_table"><label class="checkbox_label tbl" for="check_3_8"></label></td>
+                              </tr>
+                              <tr>
+                                <td><button class="btn_dots"> </button> Количество
+                                    <button class="btn_pen"></button></td>
+                                <td></td>
+                                <td><input type="text" value="580"></td>
+                                <td>1009</td>
+                                <td>Число</td>
+                                <td><input id='check_1_9' type="checkbox" class="in_table" checked><label class="checkbox_label tbl" for="check_1_9"></label></td>
+                                <td><input id='check_2_9' type="checkbox" class="sure_table"checked><label class="checkbox_label tbl" for="check_2_9"></label></td>
+                                <td><input id='check_3_9' type="checkbox" class="delete_table"><label class="checkbox_label tbl" for="check_3_9"></label></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+                <button class="add_row"> <img src="images/plus.svg" alt=""> Добавить поле</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer set">
+            <div class="footer__btn">
+                <button class="btn_save"> <img src="images/save.svg" alt=""> Сохранить</button>
+                <button class="btn_cancel"> Отменить </button>
+            </div>
+            <div class="link_doc">
+                <a href="#"> <img src="images/doc.svg" alt=""> Документация</a>
+            </div>
+        </div>
+    </footer>
+            <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Тестовое</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+         <link rel="stylesheet" href="style.css">
+         <link rel="stylesheet" href="fonts/stylesheet.css">
+      </head>
+      <body>
+        <header class="header">
+        <div class="container header">
+            <a href="" class="logo">
+                <img src="images/Logo.svg" alt="">
+            </a>
+            <a href="" class="logo">
+                <img src="images/Vector.svg" alt="">
+            </a>
+        </div>    
+    </header>
+    <div class="container">
+        <div class="container__main">
+            <div class="sidenav">
+                <ul>
+                    <li><a class="menu_link" href="#"><img src="images/property.svg" alt=""> Имущество</a></li>
+                    <li><a class="menu_link" href="#"><img src="images/inventory.svg" alt=""> Инвентаризация</a></li>
+                    <li><a class="menu_link" href="#"><img src="images/employees.svg" alt=""> Сотрудники</a></li>
+                    <li><a class="menu_link" href="#"><img src="images/notification.svg" alt=""> Уведомления</a></li>
+                    <li><a class="menu_link" href="#" style="background-color: #172139; color: #fff;"><img src="images/location.svg" alt="" style="stroke: #fff;"> Локации</a></li>
+                    <li><a class="menu_link" href="setting.html"><img src="images/settings.svg" alt=""> Настройки</a></li>
+                    <li><button class="close_btn" onclick="close_menu()"><img src="images/button_close.svg" alt="" > Скрыть меню</button></li>
+            </div>
+            <div class="sidenav_close">
+                <ul>
+                    <li><a class="menu_link" href="#"><img src="images/property.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="#"><img src="images/inventory.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="#"><img src="images/employees.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="#"><img src="images/notification.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="#" style="background-color: #172139; color: #fff;"><img src="images/location.svg" alt=""></a></li>
+                    <li><a class="menu_link" href="setting.html"><img src="images/settings.svg" alt=""> </a></li>
+                    <li><button class="close_btn" onclick="open_menu()"><img class="open_menu" src="images/button_close.svg" alt="" ></button></li>
+                </ul>
+            </div>
+            <div class="container location">
+                <h1>Локации / Все локации</h1> 
+                <div class="location__nav__button__sinc">
+                    <div class="nav">
+                        <ul>
+                            <li><a class="location_link" href="#" style="background-color: #172139; color: #fff;"> Все локации</a></li>
+                            <li><a class="location_link" href="#"> Импорт/ Экспорт</a></li>
+                            <li><a class="location_link" href="#"> Настройки</a></li>
+                        </ul>
+                    </div>
+                        <button class="btn_sinc"><img src="images/upd.svg" alt=""> Синхронизация <p>(17.05.2024 15:23:21)</p></button>
+                </div>
+                <div class="create__and__research">
+                    <button class="btn_create" onclick="openForm(1)"><img src="images/plus.svg" alt=""> Создать локацию</button>
+                    <div id="popup_loc" class="overlay">
+                        <div class="popup1">
+                            <h3>Создать локацию</h3>
+                            <div class="content">
+                                <form action="" class="popup_create">
+                                    
+                                    <input type="text" placeholder="Название">
+                                    <input type="text"  placeholder="Штрихкод">
+                                    <input type="text" placeholder="RFID">
+                                    <div class="select-container">
+                                        <select id="list" name="list">
+                                            <option value="" disabled selected hidden>Вложенность</option>
+                                            <option value="loc1">Локация 1</option>
+                                            <option value="loc2">Локация 2</option>
+                                            <option value="loc3">Локация 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="all_toogles">
+                                    <div class="toogle">
+                                        <span>Виртуальная локация</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    </div>
+                                    <div class="toogle">
+                                        <span>Локация для утерь</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    </div>
+                                </div>
+                                <div class="form_buttons">
+                                    <button class="btn_save pop"> <img src="images/save.svg" alt=""> Создать</button>
+                                    <button class="btn_cancel pop" onclick="closeForm(1)"> Отменить </button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popup_change" class="overlay">
+                        <div class="popup2">
+                            <h3>Изменить локацию %название%</h3>
+                            <div class="content">
+                                <form action="" class="popup_create">
+                                    <div class="input1">
+                                     <p>Название</p>
+                                    <input type="text" id="name" value="Локация 11">
+                                </div>
+                                <div class="input2">
+                                    <p>Штрихкод</p>
+                                    <input type="text" id="brcode" value="1123123123123">
+                                </div>
+                                    <div class="input3">
+                                    <p>RFID</p>
+                                    <input type="text" id="rfid" value="1123123123123">
+                                </div>
+                                    <div class="select-container">
+                                         <p>Вложенность</p>
+                                        <label for="list"></label>
+                                        <select id="list" name="list" id="list">
+                                            <option value="" disabled hidden>Вложенность</option>
+                                            <option value="loc1" selected>Локация 1</option>
+                                            <option value="loc2">Локация 2</option>
+                                            <option value="loc3">Локация 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="all_toogles">
+                                    <div class="toogle">
+                                        <span>Виртуальная локация</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    </div>
+                                    <div class="toogle">
+                                        <span>Локация для утерь</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    </div>
+                                </div>
+                                <div class="form_buttons">
+                                    <button class="btn_del pop"> <img src="images/x.svg" alt=""> Удалить</button>
+                                    <button class="btn_cancel pop" onclick="closeForm(2)"> Отменить </button>
+                                    <button class="btn_save pop2 "> <img src="images/save.svg" alt=""> Сохранить</button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="checkbox__with__label">
+                        <input type="checkbox" id="check" class="checkbox_input">
+                        <label class="checkbox_label" for="check">Поиск по точному вхождению</label>
+                        </div>
+                        <div class="search__input">
+                            <input type="text" class="search_field" placeholder="Поиск">
+                            <img src="images/magnifier.svg" alt="" class="search_icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="all_locations">
+                    <ul class="lvl_1">
+                        <li>
+                            <button class="btn_list"></button> 
+                            <button class="btn_dots"> </button> Локация 1 <span>333</span>
+                            <button class="btn_change" onclick="openForm(2)"> <img src="images/pen.svg" alt=""> Редактировать</button>
+                            
+                            <button class="btn_delete"> <img src="images/x.svg" alt=""> Удалить</button>
+                            <ul class="lvl_2" id="first">
+                                <li><button class="btn_list"> </button> 
+                                <button class="btn_dots"> </button> Подотдел 1 <span>333</span> <span class="lost">Для утерь</span></li>
+                                <li> <button class="btn_list"> </button> 
+                                <button class="btn_dots"> </button>Подотдел 2 <span>333</span>
+                                <ul class="lvl_3">
+                                    <li><button class="btn_dots"> </button> Подоподотел 1 <span>333</span> <span class="virtual">Виртуальная</span> <span class="barcode">Без штрихкода</span></li>
+                                </ul>
+                            </li>
+                                <li> <button class="btn_list"> </button> 
+                                <button class="btn_dots"> </button> Подотдел 3 <span>333</span></li>
+                            </ul>
+                        </li>
+                            <li> <button class="btn_list"> </button> 
+                            <button class="btn_dots"> </button> Локация 2 <span>333</span>
+                            <button class="btn_change" onclick="openForm(2)"> <img src="images/pen.svg" alt=""> Редактировать</button>
+                            <button class="btn_delete"> <img src="images/x.svg" alt=""> Удалить</button>
+                            <ul class="lvl_2" id="2">
+                                    <li> <button class="btn_list"> </button> 
+                                    <button class="btn_dots"> </button> Подотдел 1</li>
+                                    <li> <button class="btn_list"> </button> 
+                                    <button class="btn_dots"> </button> Подотдел 2</li>
+                                </ul></li>
+                            <li> <button class="btn_list"> </button> 
+                            <button class="btn_dots"> </button> Локация 3 <span>333</span>
+                            <button class="btn_change" onclick="openForm(2)"> <img src="images/pen.svg" alt=""> Редактировать</button>
+                            <button class="btn_delete"> <img src="images/x.svg" alt=""> Удалить</button>
+                            <ul class="lvl_2" id="3">
+                                    <li> <button class="btn_list"> </button> 
+                                    <button class="btn_dots"> </button> Подотдел 1</li>
+                                    <li> <button class="btn_list"> </button> 
+                                    <button class="btn_dots"> </button> Подотдел 2</li>
+                                </ul></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <footer>
+        <div class="container footer">
+            <div class="info">
+                <p>Последний приём <span>20.09.21 18:36:21</span></p>
+                <p>Последняя передача <span>20.09.21 18:38:21</span></p>
+            </div>
+            <div class="link_doc">
+                <a href="#"> <img src="images/doc.svg" alt=""> Документация</a>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
